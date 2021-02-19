@@ -16,6 +16,7 @@ namespace DemoASPCRUD.Migrations
                     Title = table.Column<string>(nullable: true),
                     Author = table.Column<string>(nullable: true),
                     Editor = table.Column<string>(nullable: true),
+                    Description = table.Column<string>(nullable: true),
                     ReleaseDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
