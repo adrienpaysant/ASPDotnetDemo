@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DemoASPCRUD.Data;
 using DemoASPCRUD.Models;
@@ -54,7 +51,7 @@ namespace DemoASPCRUD.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Author,Editor,Description,ReleaseDate")] Book book)
+        public async Task<IActionResult> Create([Bind("Id,Title,Author,Editor,Description,ReleaseDate,Description")] Book book)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +83,7 @@ namespace DemoASPCRUD.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Author,Editor,Description,ReleaseDate")] Book book)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Author,Editor,Description,ReleaseDate,Description")] Book book)
         {
             if (id != book.Id)
             {
